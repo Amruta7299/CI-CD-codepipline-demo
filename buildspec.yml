@@ -15,7 +15,7 @@ env:
 phases:
   install:
     runtime-versions:
-      python: 3.11
+      python: 3.9
     on-failure: ABORT
     commands:
       - tf_version=$TERRAFORM_VERSION
@@ -43,4 +43,5 @@ phases:
   post_build:
     on-failure: CONTINUE
     commands:
+
       - echo terraform execution completed on `date`
